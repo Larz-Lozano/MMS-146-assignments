@@ -1,7 +1,8 @@
 # You can start inputting the code
 #This is the Earphone Class
 class Earphone
-    def__init__
+    def__init__()
+    
 
 #This is the Smartphone Class
 class Smartphone:
@@ -11,3 +12,5 @@ class Smartphone:
             self.battery = b
             self.audio = 
             
+class StandFan
+     def__init__()
