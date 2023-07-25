@@ -1,5 +1,4 @@
-
-# Online Python - IDE, Editor, Compiler, Interpreter
+# You can start inputting the code
 
 def sum(a, b):
     return (a + b)
