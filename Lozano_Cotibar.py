@@ -12,10 +12,10 @@ class Laptop:
 
 #This is the methods for the Laptop Class
     def give_brand(self,brand):
-        self.brand = apple
+        self.brand = brand
 
     def give_battery(self,batt):
-        self.battery = 100
+        self.battery = batt
 
     def increase_battery(self,batt):
         self.battery = self.battery + 1
@@ -24,7 +24,7 @@ class Laptop:
         self.battery = self.battery - 1
 
     def give_color(self,color):
-        self.color = white
+        self.color = color
 
     def increase_brightness(self,bright):
         self.brightness = self.brightness + 1
@@ -33,13 +33,13 @@ class Laptop:
         self.brightness = self.brightness - 1
 
     def on_backlit_keyboard(self,backkey):
-        self.backlit_keyboard = on
+        self.backlit_keyboard = backlit_keyboard
 
     def off_backlit_keyboard(self,backkey):
-        self.backlit_keyboard = off
+        self.backlit_keyboard = backlit_keyboard
 
     def update_os(self,os):
-        self.os = update
+        self.os = os
 
 #Main Program
 Laptop1 = Laptop("apple",100,"white",10,100,200,300,"macosx")
@@ -49,6 +49,9 @@ print (Laptop1.brand)
 print (Laptop1.battery)
 print (Laptop1.color)
 print (Laptop1.os)
+print ("before increase brightness: ", Laptop1.brightness)
+Laptop1.increase_brightness("0")
+print ("after increase brightness: ", Laptop1.brightness)
 
 
 #This is the Book Class
@@ -63,19 +66,19 @@ class Book:
 
 #This is the methods for the Book Class
     def give_title(self,title):
-        self.title = harrypotter
+        self.title = title
 
     def name_author(self,author):
-        self.author = jkrowling
+        self.author = author
 
     def give_height(self,height):
-        self.height = 7
+        self.height = height
 
     def give_weight(self,weight):
-        self.weight = 101
+        self.weight = weight
 
     def give_width(self,width):
-        self.width = 5
+        self.width = width
 
     def next_page(self,page):
         self.page = self.page + 1
@@ -84,10 +87,10 @@ class Book:
         self.page = self.page - 1
 
     def bookmark_page(self,page):
-        self.page = bookmarked
+        self.page = page
 
     def give_page(self,page):
-        self.page = 300
+        self.page = page
 
 #Main Program
 Book1 = Book("harrypotter","jkrowling",7,101,5,300)
@@ -97,6 +100,9 @@ print (Book1.title)
 print (Book1.author)
 print (Book1.height)
 print (Book1.page)
+print ("before next page: ", Book1.page)
+Book1.next_page("0")
+print ("after next page: ", Book1.page)
     
 
 #This is the Cabinet Class
@@ -111,22 +117,22 @@ class Cabinet:
 
 #This is the methods for the Cabinet Class
     def give_color(self,color):
-        self.color = brown
+        self.color = color
 
     def unlock_door(self,door):
-        self.door = unlocked
+        self.door = door
 
     def lock_door(self,door):
-        self.door = locked
+        self.door = door
 
     def give_height(self,height):
-        self.height = 30
+        self.height = height
 
     def give_width(self,width):
-        self.width = 20
+        self.width = width
 
     def give_weight(self,weight):
-        self.weight = 80
+        self.weight = weight
 
     def add_clothes(self,clothes):
         self.clothes = self.clothes + 1
@@ -135,12 +141,15 @@ class Cabinet:
         self.clothes = self.clothes - 1
 
 #Main Program
-Cabinet1 = Cabinet("brown","round",1,30,20,80)
+Cabinet1 = Cabinet("brown","normal",1,30,20,80)
 
 print (Cabinet1.color)
 print (Cabinet1.door)
 print (Cabinet1.height)
-print (Cabinet1.weight)    
+print (Cabinet1.weight)
+print ("before lock door: ", Cabinet1.door)
+Cabinet1.lock_door("locked")
+print ("after lock door: ", Cabinet1.door)    
 
 
 #This is the Washing Machine Class
@@ -163,7 +172,7 @@ class WashingMachine:
         self.water = self.water - 1
 
     def give_color(self,color):
-        self.color = blue
+        self.color = color
 
     def add_laundry(self,laundry):
         self.laundry = self.laundry + 1
@@ -172,13 +181,13 @@ class WashingMachine:
         self.laundry = self.laundry - 1
 
     def gentle_program(self,program):
-        self.program = gentle
+        self.program = program
 
     def normal_program(self,program):
-        self.program = normal
+        self.program = program
 
     def strong_program(self,program):
-        self.program = strong
+        self.program = program
     
 #Main Program
 WashingMachine1 = WashingMachine(60,100,"blue","laundry","normal")
@@ -189,6 +198,9 @@ print (WashingMachine1.color)
 print ("before add water: ", WashingMachine1.water)
 WashingMachine1.add_water(0)
 print ("after add water: ", WashingMachine1.water)
+print ("before normal program: ", WashingMachine1.program)
+WashingMachine1.normal_program("strong")
+print ("after normal program: ", WashingMachine1.program)
 
 
 #This is the Bed Class
@@ -203,7 +215,7 @@ class Bed:
 
 #This is the methods for the Bed Class
     def give_color(self,color):
-        self.color = gray
+        self.color = color
 
     def give_width(self,width):
         self.width = 500
@@ -212,7 +224,7 @@ class Bed:
         self.length = 150
 
     def change_bedsheet(self,bedsheet):
-        self.bedsheet = black
+        self.bedsheet = bedsheet
 
     def add_pillows(self,pillows):
         self.pillows = self.pillows + 1
@@ -221,7 +233,7 @@ class Bed:
         self.pillows = self.pillows - 1
 
     def change_blanket(self,blanket):
-        self.blanket = changed
+        self.blanket = blanket
 
 #Main Program
 Bed1 = Bed("gray",500,150,"black",2,"pattern")
@@ -231,3 +243,6 @@ print (Bed1.color)
 print (Bed1.width)
 print (Bed1.bedsheet)
 print (Bed1.blanket)
+print ("blanket before: ", Bed1.blanket)
+Bed1.change_blanket("stripes")
+print ("blanket after: ", Bed1.blanket)
