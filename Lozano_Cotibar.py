@@ -143,9 +143,51 @@ print (Cabinet1.height)
 print (Cabinet1.weight)    
 
 
-
 #This is the Washing Machine Class
-class Washing Machine
+class WashingMachine:
+    def __init__(self,timer,water,color,laundry,program):
+        self.timer = timer
+        self.water = water
+        self.color = color
+        self.laundry = laundry
+        self.program = program
+
+#This is the methods for the Washing Machine Class
+    def increase_timer(self,timer):
+        self.timer = self.timer + 1
+
+    def add_water(self,water):
+        self.water = self.water + 1
+
+    def drain_water(self,water):
+        self.water = self.water - 1
+
+    def give_color(self,color):
+        self.color = blue
+
+    def add_laundry(self,laundry):
+        self.laundry = self.laundry + 1
+
+    def remove_laundry(self,laundry):
+        self.laundry = self.laundry - 1
+
+    def gentle_program(self,program):
+        self.program = gentle
+
+    def normal_program(self,program):
+        self.program = normal
+
+    def strong_program(self,program):
+        self.program = strong
+    
+#Main Program
+WashingMachine1 = WashingMachine(60,100,"blue","laundry","normal")
+
+
+print (WashingMachine1.program)
+print (WashingMachine1.color)
+print ("after add water: ", WashingMachine1.water)
+
 
 #This is the Bed Class
 class Bed
