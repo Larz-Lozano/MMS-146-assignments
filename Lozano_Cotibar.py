@@ -190,5 +190,42 @@ print ("after add water: ", WashingMachine1.water)
 
 
 #This is the Bed Class
-class Bed
+class Bed:
+    def __init__(self,color,width,length,bedsheet,pillows,blanket):
+        self.color = color
+        self.width = width
+        self.length = length
+        self.bedsheet = bedsheet
+        self.pillows = pillows
+        self.blanket = blanket
 
+#This is the methods for the Bed Class
+    def give_color(self,color):
+        self.color = gray
+
+    def give_width(self,width):
+        self.width = 500
+
+    def give_length(self,length):
+        self.length = 150
+
+    def change_bedsheet(self,bedsheet):
+        self.bedsheet = black
+
+    def add_pillows(self,pillows):
+        self.pillows = self.pillows + 1
+
+    def remove_pillows(self,pillows):
+        self.pillows = self.pillows - 1
+
+    def change_blanket(self,blanket):
+        self.blanket = changed
+
+#Main Program
+Bed1 = Bed("gray",500,150,"black",2,"pattern")
+
+
+print (Bed1.color)
+print (Bed1.width)
+print (Bed1.bedsheet)
+print (Bed1.blanket)
