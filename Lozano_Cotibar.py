@@ -50,6 +50,7 @@ print (Laptop1.battery)
 print (Laptop1.color)
 print (Laptop1.os)
 
+
 #This is the Book Class
 class Book:
     def __init__(self,title,author,height,weight,width,page):
@@ -64,7 +65,7 @@ class Book:
     def give_title(self,title):
         self.title = harrypotter
 
-    def give_author(self,author):
+    def name_author(self,author):
         self.author = jkrowling
 
     def give_height(self,height):
@@ -75,6 +76,15 @@ class Book:
 
     def give_width(self,width):
         self.width = 5
+
+    def next_page(self,page):
+        self.page = self.page + 1
+
+    def previous_page(self,page):
+        self.page = self.page - 1
+
+    def bookmark_page(self,page):
+        self.page = bookmarked
 
     def give_page(self,page):
         self.page = 300
@@ -89,9 +99,50 @@ print (Book1.height)
 print (Book1.page)
     
 
-
 #This is the Cabinet Class
-class Cabinet
+class Cabinet:
+    def __init__(self,color,door,clothes,height,width,weight):
+        self.color = color
+        self.door = door
+        self.clothes = clothes
+        self.height = height
+        self.width = width
+        self.weight = weight
+
+#This is the methods for the Cabinet Class
+    def give_color(self,color):
+        self.color = brown
+
+    def unlock_door(self,door):
+        self.door = unlocked
+
+    def lock_door(self,door):
+        self.door = locked
+
+    def give_height(self,height):
+        self.height = 30
+
+    def give_width(self,width):
+        self.width = 20
+
+    def give_weight(self,weight):
+        self.weight = 80
+
+    def add_clothes(self,clothes):
+        self.clothes = self.clothes + 1
+
+    def remove_clothes(self,clothes):
+        self.clothes = self.clothes - 1
+
+#Main Program
+Cabinet1 = Cabinet("brown","round",1,30,20,80)
+
+print (Cabinet1.color)
+print (Cabinet1.door)
+print (Cabinet1.height)
+print (Cabinet1.weight)    
+
+
 
 #This is the Washing Machine Class
 class Washing Machine
