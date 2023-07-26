@@ -10,7 +10,7 @@ class Laptop:
         self.width = width
         self.os = os
 
-#This is the method for the Laptop Class
+#This is the methods for the Laptop Class
     def give_brand(self,brand):
         self.brand = apple
 
@@ -51,7 +51,44 @@ print (Laptop1.color)
 print (Laptop1.os)
 
 #This is the Book Class
-class Book
+class Book:
+    def __init__(self,title,author,height,weight,width,page):
+        self.title = title
+        self.author = author
+        self.height = height
+        self.weight = weight
+        self.width = width
+        self.page = page
+
+#This is the methods for the Book Class
+    def give_title(self,title):
+        self.title = harrypotter
+
+    def give_author(self,author):
+        self.author = jkrowling
+
+    def give_height(self,height):
+        self.height = 7
+
+    def give_weight(self,weight):
+        self.weight = 101
+
+    def give_width(self,width):
+        self.width = 5
+
+    def give_page(self,page):
+        self.page = 300
+
+#Main Program
+Book1 = Book("harrypotter","jkrowling",7,101,5,300)
+
+
+print (Book1.title)
+print (Book1.author)
+print (Book1.height)
+print (Book1.page)
+    
+
 
 #This is the Cabinet Class
 class Cabinet
@@ -61,3 +98,4 @@ class Washing Machine
 
 #This is the Bed Class
 class Bed
+
