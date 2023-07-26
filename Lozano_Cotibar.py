@@ -186,6 +186,8 @@ WashingMachine1 = WashingMachine(60,100,"blue","laundry","normal")
 
 print (WashingMachine1.program)
 print (WashingMachine1.color)
+print ("before add water: ", WashingMachine1.water)
+WashingMachine1.add_water(0)
 print ("after add water: ", WashingMachine1.water)
 
 
