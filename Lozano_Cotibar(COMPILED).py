@@ -1,4 +1,10 @@
-# THIS IS SMARTPHONE CLASS
+print ("07/27/2023")
+print ("MMS 146 - Assignment #2")
+print ("Submitted by: Laryze Lozano and Jeremias Cotibar")
+print ("")
+
+
+# THIS IS THE SMARTPHONE CLASS ------------------------------
 class Smartphone:
     def __init__(self, brnd, clr, batt, aud, res, blt):
         self.brand = brnd
@@ -10,26 +16,25 @@ class Smartphone:
         
 # METHOD OF SMARTPHONE CLASS
 # change and edit method
-    def give_brand(self, brnd):
-        self.brand = "Semsung"
+    def give_brand(self, n):
+        self.brand = n
         
-    def give_color(self, clr):
-        self.color = "Blue"
+    def give_color(self, n):
+        self.color = n
         
-    def percent_battery(self):
-# change the number and/or change the sign to - or +
-        self.battery = self.battery + 3
+    def percent_battery(self,n):
+        self.battery = self.battery + n
         
     def mute_audio(self):
-        self.audio = 1
 # >=1 is equal to "No" and <1 is equal to "Yes"
+        self.audio = 1
     
-    def change_resolution(self):
-        self.resolution = "3840 x 2160"
+    def change_resolution(self,n):
+        self.resolution = n
         
-    def connect_bluetooth(self):
-        self.bluetooth = 1
-# >=1 is equivalent to "Bluetooth on" and <1 is equivalent to "bluetooth off"
+    def connect_bluetooth(self,n):
+# >=1 is equivalent to "bluetooth on" and <1 is equivalent to "bluetooth off"
+        self.bluetooth = n
 
 # MAIN PROGRAM
 # default Smartphone attributes
@@ -40,25 +45,27 @@ print ("1. My Smartphone")
 print ("  Brand: " + mySmartphone.brand)
 print ("  Color: " + mySmartphone.color)
 print ("  Battery (before): ",mySmartphone.battery, "%")
-mySmartphone.percent_battery()
+mySmartphone.percent_battery(3)
 print ("  Battery (after): ",mySmartphone.battery, "%")
-# Below is the if-else statement that will return a string instead of the integer indicated in the mute_audio method. 
+# Below is the if-else statement that will return a string instead of the integer indicated in the mySamrtphone.audio method. 
 mySmartphone.mute_audio()
 if mySmartphone.audio < 1:
-    print ("  Mute: Yes")
+    mySmartphone.audio = "Yes"
 else:
-    print ("  Mute: No")
+    mySmartphone.audio = "No"
+print ("  Mute: " + mySmartphone.audio)
 print ("  Resolution (before): " + mySmartphone.resolution + " pixels")
-mySmartphone.change_resolution()
+mySmartphone.change_resolution("3840 x 2160")
 print ("  Resolution (after): " + mySmartphone.resolution + " pixels")
 if mySmartphone.bluetooth < 1:
-    print ("  Bluetooth: Off")
+    mySmartphone.bluetooth = "Off"
 else:
-    print ("  Bluetooth: On")
+    mySmartphone.bluetooth = "On"
+print ("  Bluetooth: " + mySmartphone.bluetooth)
 # Line space
 print (" ")
 
-# THIS IS THE EARPHONE CLASS
+# THIS IS THE EARPHONE CLASS --------------------------------
 class Earphone:
     def __init__(self, brnd,clr, blt, batt, vol, call):
         self.brand = brnd
@@ -80,17 +87,15 @@ class Earphone:
         self.bluetooth = 1
         
     def percent_battery(self,n):
-# change the number and/or change the sign to - or +
         self.battery = self.battery + n
         
     def audio_volume(self,n):
         self.volume = n
         
-    def answer_call(self,n):
-# 'answer_call' refers to the feature of the earphone to answer/end/reject incoming calls.
+    def answer_call(self,n): #refers to the feature of the earphone to answer/end/reject incoming calls.
+# 1 = "answer call"; 2 = "reject call"; 3 = "end call"
         self.call = n
-#The equivalence of the integers are: 1 = "answer call"; 2 = "reject call"; 3 = "end call"
-
+        
 
 # MAIN PROGRAM
 # default attributes
@@ -102,39 +107,41 @@ print ("  Brand (before): " + myEarphone.brand)
 myEarphone.give_brand("Orange")
 print ("  Brand (after): " + myEarphone.brand)
 print ("  Color: " + myEarphone.color)
-# Below is the if-else statement that will return a string instead of the integer indicated in the connect_bluetooth method. 
+# Below is the if-else statement that will return a string instead of the integer indicated in the myEarphone.bluetooth method. 
 if myEarphone.bluetooth >= 1:
-    print ("  Bluetooth: On")
+    myEarphone.bluetooth = "On"
 else:
-    print ("  Bluetooth: Off")
-print ("  Battery (before): ", myEarphone.battery, "%")
+    myEarphone.bluetooth = "Off"
+print ("  Bluetooth: " + myEarphone.bluetooth)
+print ("  Battery (before):", myEarphone.battery, "%")
 myEarphone.percent_battery(2)
-print ("  Battery (after): ", myEarphone.battery, "%")
-print ("  Volume (before): ", myEarphone.volume, "%")
+print ("  Battery (after):", myEarphone.battery, "%")
+print ("  Volume (before):", myEarphone.volume, "%")
 myEarphone.audio_volume(100)
-print ("  Volume (after): ", myEarphone.volume, "%")
-# Below is the if-else-if statement that will return a string instead of the integer indicated in the answer_call method
+print ("  Volume (after):", myEarphone.volume, "%")
+# Below is the if-else-if statement that will return a string instead of the integer indicated in the myEarphone.call attribute
 myEarphone.answer_call(2)
 if myEarphone.call == 1:
-    print ("  Call: Answer")
+    myEarphone.call = "Answer"
 elif myEarphone.call == 2:
-    print ("  Call: Reject")
+    myEarphone.call = "Reject"
 elif myEarphone.call == 3:
-    print ("  Call: End")
+    myEarphone.call = "End"
 else:
-    print ("  Call: End")
+    myEarphone.call = "End"
+print ("  Calls: " + myEarphone.call)
 print (" ")
 
 
-# THIS IS THE STANDFAN CLASS
+# THIS IS THE STANDFAN CLASS --------------------------------
 class Standfan:
     def __init__(self, brnd, clr, hgt, tlt, spd):
         self.brand = brnd
         self.color = clr
-        self.height = hgt
-        self.tilt = tlt
+        self.height = hgt #refers to the adjustable height standpipe feature 
+        self.tilt = tlt #refers to the tilting head feature of the standfan.
         self.speed = spd
-# 'self.height' refers to the adjustable height standpipe feature and the 'self.tlt' refers to the tilting head feature of the standfan.
+
 
 # METHOD OF STANDFAN CLASS
     def give_brand(self, n):
@@ -143,17 +150,14 @@ class Standfan:
     def give_color(self, n):
         self.color = n
         
-    def increase_height(self, n):
-# 'increase_height' is adjusted by adding a number to the default(minimimum) height of the fan.
+    def increase_height(self, n): # 'increase_height' is adjusted by adding a number to the default(minimimum) height of the fan.
         self.height = self.height + n
         
-    def tilt_head(self, n):
-# 'tilt_head' refers to allowing the head to tilt side-to-side or not.
+    def tilt_head(self, n): # 'tilt_head' refers to allowing the head to tilt side-to-side or not.
+  # 0 = "off" and 1 = "On"
         self.tilt = n
-# The equivalence of the integers are: 0 = "off" and 1 = "On"
     
     def change_speed(self, n):
-# 'change_speed' refers to the speed of the fan as a feature of the standfan.
         self.speed = n        
 # The equivalence of the integers are: 0 = "off"; 1 = "1x speed"; 2 = "2x speed"; 3 = "3x speed" """
 
@@ -170,36 +174,36 @@ print ("  Color (after): " + myStandfan.color)
 print ("  Height (before):", myStandfan.height, "inches")
 myStandfan.increase_height(5)
 print ("  Height (after):", myStandfan.height, "inches")
-# Below is the if-else statement that will return a string instead of the integer indicated in the tilt_head method.
+# Below is the if-else statement that will return a string instead of the integer indicated in the myStandfan.tilt attribute.
 myStandfan.tilt_head(0)
 if myStandfan.tilt == 1:
-    print ("  Tilt Head: On")
+   myStandfan.tilt = "On"
+elif myStandfan.tilt == 0:
+    myStandfan.tilt= "Off"
 else:
-    print ("  Tilt Head: Off")
+     myStandfan.tilt= "Off"
+print ("  Tilt: " + myStandfan.tilt)
 print ("  Speed/Power (before):", myStandfan.speed)
-# Below is the if-else-if statement that will return a string instead of the integer indicated in the change_speed method 
+# Below is the if-else-if statement that will return a string instead of the integer indicated in the myStandfan.speed attribute 
 myStandfan.change_speed(3)
-if myStandfan.speed == 1:
-    print ("  Speed/Power (after): 1")
-elif myStandfan.speed == 2:
-    print ("  Speed/Power (after): 2")
-elif myStandfan.speed == 3:
-    print ("  Speed/Power (after): 3")
+if myStandfan.speed <= 0:
+    myStandfan.speed = "Off"
 else:
-    print ("  Speed/Power (after): Off")
-print ("")
+    myStandfan.speed = myStandfan.speed
+print ("  Speed/Power (after):", myStandfan.speed)
+print (" ")
 
-#This is the Laptop Class
+# THIS IS THE LAPTOP CLASS ----------------------------------
 class Laptop:
     def __init__(self,brnd,batt,clr,bght,backkey,wgt,wdth,os):
         self.brand = brnd
         self.battery = batt
         self.color = clr
         self.brightness = bght
-        self.backlit_keyboard = backkey
+        self.backlit_keyboard = backkey #refers to the led light of the keyboard
         self.weight = wgt
         self.width = wdth
-        self.os = os
+        self.os = os #operating system
 
 # METHOD FOR LAPTOP CLASS
     def give_brand(self,n):
@@ -220,13 +224,15 @@ class Laptop:
     def on_backlit_keyboard(self, n):
         self.backlit_keyboard = n
 
-    def update_os(self,n):
+    def update_os(self,n): #refers to the updated operating system
         self.os = n + "(updated)"
         
 
-#Main Program
+# MAIN PROGRAM
+# default attributes
 myLaptop = Laptop("apple",100,"white",10,1,200,300,"MACOSN")
 
+# Printed code
 print ("4. My Laptop")
 print ("  Brand: " + myLaptop.brand)
 print ("  Battery (before):", myLaptop.battery, "%")
@@ -239,13 +245,14 @@ print ("  OS (after): " + myLaptop.os)
 print ("  Brightness (before):", myLaptop.brightness, "%")
 myLaptop.increase_brightness(5)
 print ("  Brightness (after):", myLaptop.brightness, "%")
+# Below is the if-else-if statement that will return a string instead of the integer indicated in the myLaptop.backlit_keyboard attribute 
 if myLaptop.backlit_keyboard >= 1:
     print ("  Backlit Keyboard: On")
 else:
     print ("  Backlit Keyboard: Off")
 print (" ")
 
-# THIS IS BOOK CLASS
+# THIS IS THE BOOK CLASS ------------------------------------ 
 class Book:
     def __init__(self,ttl,aut,hgt,wgt,wdt,pg):
         self.title = ttl
@@ -280,10 +287,12 @@ class Book:
     def bookmarked_page(self,n):
         self.page = n
 
-#Main Program
+# MAIN PROGRAM
+# default attributes
 favBook = Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 9.5, 600, 5, 300)
 
-print ("5. Favorite Book")
+# Printed code
+print ("5. My Favorite Book")
 print ("  Title: " + favBook.title)
 print ("  Author: " + favBook.author)
 print ("  Current Page:", favBook.page)
@@ -295,7 +304,7 @@ favBook.bookmarked_page(205)
 print ("  Bookmarked Page:", favBook.page)
 print (" ")
 
-# THIS IS CABINET CLASS
+# THIS IS THE CABINET CLASS ---------------------------------
 class Cabinet:
     def __init__(self,clr,dr,clth,hgt,wdt,wgt):
         self.color = clr
@@ -305,7 +314,7 @@ class Cabinet:
         self.width = wdt
         self.weight = wgt
 
-#This is the methods for the Cabinet Class
+# METHOD OF THE CABINET CLASS
     def give_color(self,n):
         self.color = n
 
@@ -327,9 +336,11 @@ class Cabinet:
     def remove_clothes(self,n):
         self.clothes = self.clothes - n
 
-#Main Program
+# MAIN PROGRAM
+# default attributes
 Cabinet1 = Cabinet("Brown","Unlocked",5,10,30,80)
 
+# Printed code
 print ("6. My Cabinet")
 print ("  Color:" + Cabinet1.color)
 print ("  Height:", Cabinet1.height, "inches")
@@ -345,24 +356,24 @@ print ("  Door (after):", Cabinet1.door)
 print (" ")
 
 
-#THIS IS WASHING MACHINE CLASS
+# THIS IS THE WASHING MACHINE CLASS -------------------------
 class WashingMachine:
     def __init__(self,tmr,wtr,clr,ldry,prog):
         self.timer = tmr
         self.water = wtr
         self.color = clr
-        self.laundry = ldry
-        self.program = prog
+        self.laundry = ldry 
+        self.program = prog #refers to wash program
 
-#This is the methods for the Washing Machine Class
-    def increase_timer(self):
-        self.timer = self.timer + 5
+# METHOD OF WASHING MACHINE CLASS
+    def increase_timer(self,n):
+        self.timer = self.timer + n
 
     def add_water(self,n):
         self.water = self.water + n
 
     def drain_water(self,n):
-        self.water = self.water - n
+        self.water = self.water - n 
 
     def give_color(self,n):
         self.color = n
@@ -374,20 +385,26 @@ class WashingMachine:
         self.laundry = self.laundry - n
 
     def wash_program(self,n):
+# 1 = "gentle"; 2 = "normal"; 3 = "strong"
         self.program = n
     
-#Main Program
-WashingMachine1 = WashingMachine(35,0,"blue",5, 2)
+# MAIN PROGRAM
+# default attributes
+WashingMachine1 = WashingMachine(20,0,"blue",5, 2)
 
-
+# Printed code
 print ("7. Washing Machine")
 print ("  Color: " + WashingMachine1.color)
 print ("  Water (before):", WashingMachine1.water, "gallons")
-WashingMachine1.add_water(6)
+WashingMachine1.add_water(6) 
 print ("  Water (after):", WashingMachine1.water, "gallons")
 print ("  No. of Laundry (before):", WashingMachine1.laundry)
 WashingMachine1.add_laundry(5)
 print ("  No. of Laundry (after):", WashingMachine1.laundry)
+print ("  Timer (before):", WashingMachine1.timer)
+WashingMachine1.increase_timer(5)
+print ("  Timer (after):", WashingMachine1.timer)
+# Below is the if-else-if statement that will return a string instead of the integer indicated in the WashineMachine1.program attribute 
 if WashingMachine1.program ==1:
     WashingMachine1.program = "Gentle"
 elif WashingMachine1.program == 2:
@@ -397,7 +414,7 @@ elif WashingMachine1.program == 3:
 print ("  Wash Program: " + WashingMachine1.program)
 print (" ")
 
-#This is the Bed Class
+# THIS IS THE BED CLASS -------------------------------------
 class Bed:
     def __init__(self,clr,wdt,lth,bsht,plw,blkt):
         self.color = clr
@@ -407,7 +424,7 @@ class Bed:
         self.pillows = plw
         self.blanket = blkt
 
-#This is the methods for the Bed Class
+# METHOD OF THE BED CLASS
     def give_color(self,n):
         self.color = n
 
@@ -417,7 +434,7 @@ class Bed:
     def give_length(self,n):
         self.length = n
 
-    def change_bedsheet(self,n):
+    def change_bedsheet(self,n): #change bedsheet design
         self.bedsheet = n
 
     def add_pillows(self,n):
@@ -426,12 +443,14 @@ class Bed:
     def remove_pillows(self,n):
         self.pillows = self.pillows - n
 
-    def change_blanket(self,n):
+    def change_blanket(self,n):  #change bedsheet design
         self.blanket = n
 
-#Main Program
+# MAIN PROGRAM
+# default attributes
 myBed = Bed("Gray",500,150,"Black",2,"Pattern")
 
+# Printed cod
 print ("8. My Bed")
 print ("  Color: " + myBed.color)
 print ("  Width:", myBed.width, "inches")
