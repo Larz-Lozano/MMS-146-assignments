@@ -230,7 +230,7 @@ class Laptop:
 
 # MAIN PROGRAM
 # default attributes
-myLaptop = Laptop("apple",100,"white",10,1,200,300,"MACOSN")
+myLaptop = Laptop("Epple",100,"White",10,1,200,300,"MACOSN")
 
 # Printed code
 print ("4. My Laptop")
@@ -390,7 +390,7 @@ class WashingMachine:
     
 # MAIN PROGRAM
 # default attributes
-WashingMachine1 = WashingMachine(20,0,"blue",5, 2)
+WashingMachine1 = WashingMachine(20,0,"Blue",5, 2)
 
 # Printed code
 print ("7. Washing Machine")
@@ -401,9 +401,9 @@ print ("  Water (after):", WashingMachine1.water, "gallons")
 print ("  No. of Laundry (before):", WashingMachine1.laundry)
 WashingMachine1.add_laundry(5)
 print ("  No. of Laundry (after):", WashingMachine1.laundry)
-print ("  Timer (before):", WashingMachine1.timer)
+print ("  Timer (before):", WashingMachine1.timer, "minutes")
 WashingMachine1.increase_timer(5)
-print ("  Timer (after):", WashingMachine1.timer)
+print ("  Timer (after):", WashingMachine1.timer, "minutes")
 # Below is the if-else-if statement that will return a string instead of the integer indicated in the WashineMachine1.program attribute 
 if WashingMachine1.program ==1:
     WashingMachine1.program = "Gentle"
