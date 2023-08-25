@@ -71,7 +71,7 @@ class Smartphone(Device):
         print (" Flashlight:", self.flashlight)
 
     #Below is the getter method for the phone number attribute
-    def get_phonenNumber(self):
+    def get_phoneNumber(self):
         print (" Phone Number:", self.__phoneNumber)
 
 
@@ -90,5 +90,5 @@ iphone.print_flashlight(1)
 """
 iphone.get_lockscreenPass()
 iphone.set_lockscreenPass(34964)
-iphone.get_phonenNumber()
+iphone.get_phoneNumber()
 """
