@@ -12,3 +12,9 @@ Submit a Python code (called SurnameStudent1_SurnameStudent2.py) that subscribes
 * As previously mentioned, you will submit only one Python code which contains several classes (i.e. your 5 classes) and the main program. This is an example.
 * I will grant bonus points to those who will convert ALL 8 real-world objects.
 * Take note that, again, only 1 submission has to be made per pair.
+
+
+**ASSIGNMENT 3**
+*Instructions: Choose only 2 out of the 5 classes you have in Assignment #2. Then, based on your own understanding, incorporate the concepts of inheritance and encapsulation in each of those 2 classes. Explain how you have accomplished those by putting appropriate, detailed comments in those parts/sections of the code that you have added and/or modified. 
+
+*Deliverable: A single Python code called SurnameStudent1_SurnameStudent2.py. One submission per pair should suffice.
