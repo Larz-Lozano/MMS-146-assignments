@@ -3,122 +3,81 @@ print ("MMS 146 - Assignment #3")
 print ("Submitted by: Laryze Lozano and Jeremias Cotibar")
 print ("")
 
-#THIS IS THE SMARTPHONE CLASS --------------------------------------
-class Smartphone:
-    def __init__(self, brnd, clr, batt, aud, res, blt):
-        self.brand = brnd
-        self.color = clr
+#PARENT CLASS 
+class Device: 
+    def __init__(self, br, os, batt, vol, blt, pw):
+        self.brand = br
+        self.os = os
         self.battery = batt
-        self.audio = aud
-        self.resolution = res
+        self.volume = vol
         self.bluetooth = blt
-        
-# METHOD OF SMARTPHONE CLASS
-# change and edit method
-    def give_brand(self, n):
-        self.brand = n
-        
-    def give_color(self, n):
-        self.color = n
-        
-    def percent_battery(self,n):
-        self.battery = self.battery + n
-        
-    def mute_audio(self):
-# >=1 is equal to "No" and <1 is equal to "Yes"
-        self.audio = 1
-    
-    def change_resolution(self,n):
-        self.resolution = n
-        
+        self.__lockscreenPass = pw 
+        # We set the lockscreen password attribute in private since in the real world, it is a sensitive information
+
+    def give_brand(self):
+        print (" Brand:", self.brand)
+
+    def give_os(self):
+        print (" Operationg System:", self.os)
+
+    def print_battery(self):
+        print (" Battery:", self.battery , "%")
+
+    def increase_volume(self,n):
+        self.volume = self.volume + n 
+        print (" Volume:", self.volume)
+
     def connect_bluetooth(self,n):
-# >=1 is equivalent to "bluetooth on" and <1 is equivalent to "bluetooth off"
         self.bluetooth = n
+        if self.bluetooth == 1:
+            self.bluetooth = "Connected"
+        else:
+            self.bluetooth = "Disconnected"
+        print (" Bluetooth:", self.bluetooth)
 
-# MAIN PROGRAM
-# default Smartphone attributes
-mySmartphone = Smartphone("Semsung", "Red", 50, 0, "360 x 800", 0)
+     # Below are the setter and getter method to display the password attribute
+    def get_lockscreenPass(self):
+        print (" Password:",self.__lockscreenPass)
 
-# Printed code
-print ("1. My Smartphone")
-print ("  Brand: " + mySmartphone.brand)
-print ("  Color: " + mySmartphone.color)
-print ("  Battery (before): ",mySmartphone.battery, "%")
-mySmartphone.percent_battery(3)
-print ("  Battery (after): ",mySmartphone.battery, "%")
-# Below is the if-else statement that will return a string instead of the integer indicated in the mySamrtphone.audio method. 
-mySmartphone.mute_audio()
-if mySmartphone.audio < 1:
-    mySmartphone.audio = "Yes"
-else:
-    mySmartphone.audio = "No"
-print ("  Mute: " + mySmartphone.audio)
-print ("  Resolution (before): " + mySmartphone.resolution + " pixels")
-mySmartphone.change_resolution("3840 x 2160")
-print ("  Resolution (after): " + mySmartphone.resolution + " pixels")
-if mySmartphone.bluetooth < 1:
-    mySmartphone.bluetooth = "Off"
-else:
-    mySmartphone.bluetooth = "On"
-print ("  Bluetooth: " + mySmartphone.bluetooth)
-# Line space
-print (" ")
+    def set_lockscreenPass(self,n):
+        self.__lockscreenPass = n
+        print (" Password:",self.__lockscreenPass)
 
-# THIS IS THE LAPTOP CLASS ----------------------------------------------
-class Laptop:
-    def __init__(self,brnd,batt,clr,bght,backkey,wgt,wdth,os):
-        self.brand = brnd
-        self.battery = batt
-        self.color = clr
-        self.brightness = bght
-        self.backlit_keyboard = backkey #refers to the led light of the keyboard
-        self.weight = wgt
-        self.width = wdth
-        self.os = os #operating system
+#CHILD CLASS: SMARTPHONE
+class Smartphone(Device): 
+    def __init__(self, br, os, batt, aud, blt, pw, fl, num):
+        super().__init__(br, os, batt, aud, blt, pw)
+        self.flashlight = fl 
+        self.__phoneNumber = num 
+        #Phone number is also a private code
 
-# METHOD FOR LAPTOP CLASS
-    def give_brand(self,n):
-        self.brand = n
+    def print_flashlight(self,n):
+        self.flashlight = n
+        if self.flashlight == 1:
+            self.flashlight = "On"
+        else:
+            self.flashlight = "Off"
+        print (" Flashlight:", self.flashlight)
 
-    def give_color(self,n):
-        self.color = self.color + n
+    #Below is the getter method for the phone number attribute
+    def get_phonenNumber(self):
+        print (" Phone Number:", self.__phoneNumber)
 
-    def percent_battery(self,n):
-        self.battery = self.battery - n
 
-    def increase_brightness(self, n):
-        self.brightness = self.brightness + n
+#MAIN PROGRAM
+# default iphone attributes 
+iphone = Smartphone("Apple", "iOS 15", 80, 50, 0, "08124", 0, "0945 430 5310")
 
-    def decrease_brightness(self, n):
-        self.brightness = self.brightness - n
-
-    def on_backlit_keyboard(self, n):
-        self.backlit_keyboard = n
-
-    def update_os(self,n): #refers to the updated operating system
-        self.os = n + "(updated)"
-        
-
-# MAIN PROGRAM
-# default attributes
-myLaptop = Laptop("Epple",100,"White",10,1,200,300,"MACOSN")
-
-# Printed code
-print ("4. My Laptop")
-print ("  Brand: " + myLaptop.brand)
-print ("  Battery (before):", myLaptop.battery, "%")
-myLaptop.percent_battery(3)
-print ("  Battery (after):", myLaptop.battery, "%")
-print ("  Color: " + myLaptop.color)
-print ("  OS (before): " + myLaptop.os)
-myLaptop.update_os("MACOSX")
-print ("  OS (after): " + myLaptop.os)
-print ("  Brightness (before):", myLaptop.brightness, "%")
-myLaptop.increase_brightness(5)
-print ("  Brightness (after):", myLaptop.brightness, "%")
-# Below is the if-else-if statement that will return a string instead of the integer indicated in the myLaptop.backlit_keyboard attribute 
-if myLaptop.backlit_keyboard >= 1:
-    print ("  Backlit Keyboard: On")
-else:
-    print ("  Backlit Keyboard: Off")
-print (" ")
+print ("Smartphone")
+iphone.give_brand()
+iphone.give_os()
+iphone.print_battery()
+iphone.increase_volume(3)
+iphone.connect_bluetooth(0)
+iphone.print_flashlight(1)
+#The codes below will print the privat attributes of Smartphone for private attributes/method
+"""
+iphone.get_lockscreenPass()
+iphone.set_lockscreenPass(34964)
+iphone.get_phonenNumber()
+"""
