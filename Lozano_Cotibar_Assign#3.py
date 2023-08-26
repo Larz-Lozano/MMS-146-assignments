@@ -92,3 +92,6 @@ iphone.get_lockscreenPass()
 iphone.set_lockscreenPass(34964)
 iphone.get_phoneNumber()
 """
+
+
+#CHILD CLASS: Laptop
