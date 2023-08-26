@@ -74,26 +74,6 @@ class Smartphone(Device):
     def get_phoneNumber(self):
         print (" Phone Number:", self.__phoneNumber)
 
-
-#MAIN PROGRAM
-# default iphone attributes 
-iphone = Smartphone("Apple", "iOS 15", 80, 50, 0, "08124", 0, "0945 430 5310")
-
-print ("Smartphone")
-iphone.give_brand()
-iphone.give_os()
-iphone.print_battery()
-iphone.increase_volume(3)
-iphone.connect_bluetooth(0)
-iphone.print_flashlight(1)
-#The codes below will print the private attributes of Smartphone for private attributes/method
-"""
-iphone.get_lockscreenPass()
-iphone.set_lockscreenPass(34964)
-iphone.get_phoneNumber()
-"""
-
-
 #CHILD CLASS: Laptop
 """ We added the backlit keyboard, touchpad, and IP address attributes to the laptop class.
 the IP address is set to private"""
@@ -129,8 +109,24 @@ class Laptop(Device):
     def get_ipaddress(self):
         print (self.__ipaddress)
     
-#Main Program
+#MAIN PROGRAM
+# default iphone attributes 
+myPhone = Smartphone("Epple", "iOS 15", 80, 50, 0, "08124", 0, "0945 430 5310")
 myLaptop = Laptop("Epple","MACOSN",100,10,0,"04321",1,1,"192 168 0 0")
+
+print ("Smartphone")
+myPhone.give_brand()
+myPhone.give_os()
+myPhone.print_battery()
+myPhone.increase_audio(3)
+myPhone.connect_bluetooth(0)
+myPhone.print_flashlight(1)
+#The codes below will print the private attributes of Smartphone for private attributes/method
+"""
+myPhone.get_lockscreenPass()
+myPhone.set_lockscreenPass(34964)
+myPhone.get_phoneNumber()
+"""
 
 print ("Laptop")
 myLaptop.give_brand()
