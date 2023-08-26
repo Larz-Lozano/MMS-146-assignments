@@ -95,7 +95,8 @@ iphone.get_phoneNumber()
 
 
 #CHILD CLASS: Laptop
-""" COMMENT HERE """
+""" We added the backlit keyboard, touchpad, and IP address attributes to the laptop class.
+the IP address is set to private"""
 
 class Laptop(Device): 
     def __init__(self, br, os, batt, vol, blt, pw, backkey, tp, ip):
