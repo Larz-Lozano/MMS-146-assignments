@@ -1,4 +1,4 @@
-print ("08/25/2023")
+print ("08/26/2023")
 print ("MMS 146 - Assignment #3")
 print ("Submitted by: Laryze Lozano and Jeremias Cotibar")
 print ("")
@@ -118,7 +118,7 @@ print ("Smartphone")
 myPhone.give_brand()
 myPhone.give_os()
 myPhone.print_battery()
-myPhone.increase_audio(3)
+myPhone.increase_volume(3)
 myPhone.connect_bluetooth(0)
 myPhone.print_flashlight(1)
 #The codes below will print the private attributes of Smartphone for private attributes/method
@@ -135,12 +135,9 @@ myLaptop.print_battery()
 myLaptop.increase_volume(5)
 myLaptop.connect_bluetooth(1)
 myLaptop.print_backlit_keyboard(0)
-myLaptop.print_touchpad(1)
+myLaptop.print_touchpad(0)
 #The codes below are to get the private attributes of the laptop class
 """
 myLaptop.get_lockscreenPass()
 myLaptop.get_ipaddress()
 """
-
-
-
