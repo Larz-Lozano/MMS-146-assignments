@@ -95,3 +95,55 @@ iphone.get_phoneNumber()
 
 
 #CHILD CLASS: Laptop
+""" COMMENT HERE """
+
+class Laptop(Device): 
+    def __init__(self, br, os, batt, vol, blt, pw, backkey, tp, ip):
+        super().__init__(br, os, batt, vol, blt, pw)
+        self.backlit_keyboard = backkey
+        self.touchpad = tp
+        self.__ipaddress = ip #private
+
+    def print_backlit_keyboard(self, backkey):
+        self.backlit_keyboard = backkey
+        #Below is the if-else statement
+        if self.backlit_keyboard >= 1:
+            print ("  Backlit Keyboard: On")
+        else:
+            print ("  Backlit Keyboard: Off")
+            print (" ")
+
+    def print_touchpad(self, tp):
+        self.touchpad = tp
+        #Below is the if-else statement
+        if self.touchpad >= 1:
+            print ("  Touchpad: On")
+        else:
+            print ("  Touchpad: Off")
+            print (" ")
+
+    def set_ipaddress(self,ip):
+        self.__ipaddress = ip
+
+    def get_ipaddress(self):
+        print (self.__ipaddress)
+    
+#Main Program
+myLaptop = Laptop("Epple","MACOSN",100,10,0,"04321",1,1,"192 168 0 0")
+
+print ("Laptop")
+myLaptop.give_brand()
+myLaptop.give_os()
+myLaptop.print_battery()
+myLaptop.increase_volume(5)
+myLaptop.connect_bluetooth(1)
+myLaptop.print_backlit_keyboard(1)
+myLaptop.print_touchpad(1)
+#The codes below are to get the private attributes of the laptop class
+"""
+myLaptop.get_lockscreenPass()
+myLaptop.get_ipaddress()
+"""
+
+
+
